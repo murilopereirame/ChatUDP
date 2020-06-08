@@ -7,3 +7,10 @@ Chat desenvolvido para a disciplina de Redes I - FCT Unesp 2020
 
 - Cliente  
 > python client.py server-ip
+
+
+# Grupo
+- Daniel Themoteo
+- Evandro Duarte
+- Mauricio Rodrigues
+- Murilo Pereira
