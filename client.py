@@ -51,8 +51,9 @@ class Client:
 
     def chat(self):
         while True:
-            data = input()
+            data = input("[" + self.user + "]: ")
             if data == 'croom':
+                sys.stdout.write("\033[F")
                 newRoom = input("Digite a nova sala: ")
                 self.room = newRoom
                 self.sendMessage('croom ' + newRoom)
@@ -61,7 +62,9 @@ class Client:
                 continue
             elif data=='disconnect':
                 self.sendMessage(data)
+                print('Desconectado do servidor')
                 break
+            sys.stdout.write("\033[F")
             print('['+self.user+'] -> ' + data)
             self.sendMessage(data)                    
         self.clientSock.close()

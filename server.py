@@ -68,6 +68,7 @@ class Server:
     def dropUser(self, addr):
          for client in self.clients:
             if(client.getIpAddr() == addr[0] and client.getPort() == addr[1]):
+                print('Cliente ' + client.getUser() + ' desconectado')
                 self.clients.remove(client)
                 return
 
